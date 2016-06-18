@@ -16,3 +16,8 @@ Now we are trying to push our repository to Github when we build our repository 
 
 ## Branches to Build
 - **Branch Specifier** is left blank for jenkins to track all branches.
+
+## How to merge branches that successfully build and push to remote master via Jenkins?
+- [1] is a good article.
+
+[1]: https://www.cloudbees.com/blog/dont-phunk-my-stable-branch-jenkins-pre-tested-commits-stop-breaking-stable-branches "Pre-tested commits"
