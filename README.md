@@ -64,5 +64,5 @@ Now we are trying to push our repository to Github when we build our repository 
 - **Branch Specifier** is left blank for jenkins to track all branches.
 
 ## Resources
--[Here](https://www.cloudbees.com/blog/dont-phunk-my-stable-branch-jenkins-pre-tested-commits-stop-breaking-stable-branches ) is a good article.
-https://www.youtube.com/watch?v=1JSOGJQAhtE
+1. [Jenkins merges branches into master](https://www.cloudbees.com/blog/dont-phunk-my-stable-branch-jenkins-pre-tested-commits-stop-breaking-stable-branches )
+2. [Jenkins vide tutorial series](https://www.youtube.com/watch?v=1JSOGJQAhtE)
