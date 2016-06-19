@@ -13,7 +13,7 @@ The idea is simple. Instead of waiting lost of components to integrate, project 
   CI server checks the repository regularly. It scans entire repository and verify it with the server. It is more expensive method than webhooks.  
   **Webhooks**
   > Webhooks allow external services to be notified when certain events happen within your repository.
-  
+
   is defined by Github Webhooks. When the repository changes, Github will POST the changes to our serever by adding server link to our Github settings. This will be explained soon in this tutorial.
 4. If project build or test fails CI server sends notifications to team (e.g. by e-mail).
 5. CI server generates reports.
@@ -34,16 +34,16 @@ The idea is simple. Instead of waiting lost of components to integrate, project 
 
  > ./startup.sh
 
-3. Now go to your **localhost:8080/jenkins** in your browser. Jenkins is running!
+3. Now go to your **[localhost:8080/jenkins](localhost:8080/jenkins)** in your browser. Jenkins is running!
 4. to stop tomcat, type  
 
  > ./shutdown.sh
- 
+
 
 ### Use jenkins in built in Jetty servlet
 Jenkins has built in **Jetty** servlet container. **cd** (change directory in terminal) into to your jenkins.war folder and type:
     java -jar jenkins.war
-Now go to your **localhost:8080** in your browser. Jenkins is running!
+Now go to your **[localhost:8080](localhost:8080/jenkins)** in your browser. Jenkins is running!
 
 ## Build Triggers
 - `Build when a change is pushed to Github`option is checked.
@@ -61,7 +61,6 @@ Now we are trying to push our repository to Github when we build our repository 
 ## Branches to Build
 - **Branch Specifier** is left blank for jenkins to track all branches.
 
-## How to merge branches that successfully build and push to remote master via Jenkins?
-- [Here] is a good article.
-
-[Here]: https://www.cloudbees.com/blog/dont-phunk-my-stable-branch-jenkins-pre-tested-commits-stop-breaking-stable-branches "Pre-tested commits"
+## Resources
+-[Here](https://www.cloudbees.com/blog/dont-phunk-my-stable-branch-jenkins-pre-tested-commits-stop-breaking-stable-branches ) is a good article.
+https://www.youtube.com/watch?v=1JSOGJQAhtE
