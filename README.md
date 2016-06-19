@@ -18,7 +18,6 @@ CI server checks the repository regularly. It scans entire repository and verify
 > Webhooks allow external services to be notified when certain events happen within your repository.
 
 is defined by Github Webhooks. When the repository changes, Github will POST the changes to our serever by adding server link to our Github settings. This will be explained soon in this tutorial.
-
 4. If project build or test fails CI server sends notifications to team (e.g. by e-mail).
 5. CI server generates reports.
 
