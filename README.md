@@ -10,6 +10,7 @@ The idea is simple. Instead of waiting lost of components to integrate, project 
 2. Repository (Github in this tutorial) changes.
 3. CI server (local Jenkins in this tutorial) get notification either by Poll or Webhooks.
 CI server checks the repository regularly. It scans entire repository and verify it with the server. It is more expensive method than webhooks.
+**Webhooks**
 > Webhooks allow external services to be notified when certain events happen within your repository.
 
 is defined by Github Webhooks. When the repository changes, Github will POST the changes to our serever by adding server link to our Github settings. This will be explained soon in this tutorial.
@@ -33,7 +34,7 @@ is defined by Github Webhooks. When the repository changes, Github will POST the
 
 3. Now go to your **localhost:8080/jenkins** in your browser. Jenkins is running!
 4. to stop tomcat, type
-    ./shutdown.sh
+> ./shutdown.sh
 
 ### Use jenkins in built in Jetty servlet
 Jenkins has built in **Jetty** servlet container. **cd** (change directory in terminal) into to your jenkins.war folder and type:
