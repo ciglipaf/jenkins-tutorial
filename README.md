@@ -20,6 +20,7 @@ is defined by Github Webhooks. When the repository changes, Github will POST the
 
 ### Download Tomcat
 *If you don't want to host your jenkins in Tomcat, skip those steps and keep reading [here] (#Use jenkins in built in Jetty servlet)*
+
 1. I have used latest tomcat version for now which is 9. Go [here](http://tomcat.apache.org/download-90.cgi) chose *Core* and select appropriate version for your system, i have chose *tar.gz* for my *OS X EL Capitan*
 2. Extract it to somewhere that you have access, my tomcat location now is */Users/cemalonder/Development/Libraries/apache-tomcat-9.0.0.M8*
 
@@ -40,6 +41,9 @@ Jenkins has built in *Jetty* servlet container. *cd* (change directory in termin
 `java -jar jenkins.war `
 Now go to your **localhost:8080** in your browser. Jenkins is running!
 
+## Create and configure Jenkins project
+1.
+2.
 ## Build Triggers
 - `Build when a change is pushed to Github`option is checked.
 - Since jenkins is working on localhost, previous option is not worked. Github can't connect our localhost directly. So we used **ngrok** to create tunnel.
