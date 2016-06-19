@@ -2,7 +2,7 @@
 Jenkins is a continuous integration(CI) software. It is widely used for build and test projects continuously and integrate the changes. It is center of the builds for a developer team. In this tutorial we are going to use Jenkins CI with Github repository using Webhooks to notify Jenkins server. Also we will show you how to set up Jenkins locally using **Tomcat** and how to tunnel your localhost using **ngrok** so Github Webhooks can interact with your localhost like a server and push changes to the Jenkins server.
 
 ## Continuous Integration?
-We have a developer team. They each code a few new classes and tested them well. But when they integrate their classes together bugs arise and code breaks. This problem is called an *integration hell*. Realizing this problem may be too late if the project schedule is near to the end as well as it will be expensive. To solve this problem, people get inspired from eXtreme Programming(XP).
+We have a developer team. They each code a few new classes and tested them well. But when they integrate their classes together bugs arise and code breaks. This problem is called an **integration hell**. Realizing this problem may be too late if the project schedule is near to the end as well as it will be expensive. To solve this problem, people get inspired from eXtreme Programming(XP).
 The idea is simple. Instead of waiting lost of components to integrate, project is build whenever a developer pushes a new change to repository. So it will automatically build test and report each changes.
 
 ## How it actually works?
@@ -10,9 +10,11 @@ The idea is simple. Instead of waiting lost of components to integrate, project 
 2. Repository (Github in this tutorial) changes.
 3. CI server (local Jenkins in this tutorial) get notification either by Poll or Webhooks.
   - Poll
-CI server checks the repository regularly. It scans entire repository and verify it with the server. It is more expensive method than webhooks.
+> CI server checks the repository regularly. It scans entire repository and verify it with the server. It is more expensive method than webhooks.
   - Webhooks
-*Webhooks allow external services to be notified when certain events happen within your repository.* is defined by Github Webhooks. When the repository changes, Github will POST the changes to our serever by adding server link to our Github settings. This will be explained soon in this tutorial.
+> Webhooks allow external services to be notified when certain events happen within your repository.
+
+is defined by Github Webhooks. When the repository changes, Github will POST the changes to our serever by adding server link to our Github settings. This will be explained soon in this tutorial.
 4. If project build or test fails CI server sends notifications to team (e.g. by e-mail).
 5. CI server generates reports.
 
