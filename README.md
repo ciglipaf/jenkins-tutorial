@@ -9,9 +9,9 @@ The idea is simple. Instead of waiting lost of components to integrate, project 
 1. Developers push new code.
 2. Repository (Github in this tutorial) changes.
 3. CI server (local Jenkins in this tutorial) get notification either by Poll or Webhooks.
-  - Poll
+**Poll**
 > CI server checks the repository regularly. It scans entire repository and verify it with the server. It is more expensive method than webhooks.
-  - Webhooks
+**Webhooks**
 > Webhooks allow external services to be notified when certain events happen within your repository.
 
 is defined by Github Webhooks. When the repository changes, Github will POST the changes to our serever by adding server link to our Github settings. This will be explained soon in this tutorial.
