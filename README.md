@@ -19,31 +19,28 @@ is defined by Github Webhooks. When the repository changes, Github will POST the
 5. CI server generates reports.
 
 ### Download Tomcat
-*If you don't want to host your jenkins in Tomcat, skip those steps and keep reading [here] (#Use jenkins in built in Jetty servlet)*
+*If you don't want to host your jenkins in Tomcat, skip those steps and keep reading [here] (#use-jenkins-in-built-in-jetty-servlet)*
 
-1. I have used latest tomcat version for now which is 9. Go [here](http://tomcat.apache.org/download-90.cgi) chose *Core* and select appropriate version for your system, i have chose *tar.gz* for my *OS X EL Capitan*
-2. Extract it to somewhere that you have access, my tomcat location now is */Users/cemalonder/Development/Libraries/apache-tomcat-9.0.0.M8*
+1. I have used latest tomcat version for now which is 9. Go [here](http://tomcat.apache.org/download-90.cgi) chose **Core** and select appropriate version for your system, i have chose **tar.gz** for my **OS X EL Capitan**
+2. Extract it to somewhere that you have access, my tomcat location now is **/Users/cemalonder/Development/Libraries/apache-tomcat-9.0.0.M8**
 
 ### Download Jenkins
-1. Go [here](https://jenkins.io/) and click on *Downlads* dropdown on the upper left, choose *2.9.war* file (or latest version at the time you are reading this tutorial).
-2. Move *jenkins.war* file *webapps* folder which is under the tomcat path in the previous step. So my jenkins location is */Users/cemalonder/Development/Libraries/apache-tomcat-9.0.0.M8/webapps/jenkins.war*
+1. Go [here](https://jenkins.io/) and click on **Downlads** dropdown on the upper left, choose **2.9.war** file (or latest version at the time you are reading this tutorial).
+2. Move **jenkins.war** file **webapps** folder which is under the tomcat path in the previous step. So my jenkins location is **/Users/cemalonder/Development/Libraries/apache-tomcat-9.0.0.M8/webapps/jenkins.war**
 
 ### Startup server
-1. *cd* into your tomcat/bin path. Mine is */Users/cemalonder/Development/Libraries/apache-tomcat-9.0.0.M8/bin*
+1. **cd** into your tomcat/bin path. Mine is **/Users/cemalonder/Development/Libraries/apache-tomcat-9.0.0.M8/bin**
 2. type
-`./startup.sh`
+    ./startup.sh
 3. Now go to your **localhost:8080/jenkins** in your browser. Jenkins is running!
 4. to stop tomcat, type
-`./shutdown.sh`
+    ./shutdown.sh
 
 ### Use jenkins in built in Jetty servlet
-Jenkins has built in *Jetty* servlet container. *cd* (change directory in terminal) into to your jenkins.war folder and type:
-`java -jar jenkins.war `
+Jenkins has built in **Jetty** servlet container. **cd** (change directory in terminal) into to your jenkins.war folder and type:
+    java -jar jenkins.war
 Now go to your **localhost:8080** in your browser. Jenkins is running!
 
-## Create and configure Jenkins project
-1.
-2.
 ## Build Triggers
 - `Build when a change is pushed to Github`option is checked.
 - Since jenkins is working on localhost, previous option is not worked. Github can't connect our localhost directly. So we used **ngrok** to create tunnel.
