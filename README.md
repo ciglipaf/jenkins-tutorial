@@ -41,7 +41,7 @@ Now go to your **localhost:8080** in your browser. Jenkins is running!
 
 ## Create and configure Jenkins project
 1.
-2. 
+2.
 ## Build Triggers
 - `Build when a change is pushed to Github`option is checked.
 - Since jenkins is working on localhost, previous option is not worked. Github can't connect our localhost directly. So we used **ngrok** to create tunnel.
