@@ -30,11 +30,15 @@ The idea is simple. Instead of waiting lost of components to integrate, project 
 
 ### Startup server
 1. **cd** into your tomcat/bin path. Mine is **/Users/cemalonder/Development/Libraries/apache-tomcat-9.0.0.M8/bin**
-2. type
-  > ./startup.sh
+2. type  
+
+ > ./startup.sh
+
 3. Now go to your **localhost:8080/jenkins** in your browser. Jenkins is running!
-4. to stop tomcat, type
-  > ./shutdown.sh
+4. to stop tomcat, type  
+
+ > ./shutdown.sh
+ 
 
 ### Use jenkins in built in Jetty servlet
 Jenkins has built in **Jetty** servlet container. **cd** (change directory in terminal) into to your jenkins.war folder and type:
