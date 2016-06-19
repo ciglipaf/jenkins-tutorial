@@ -40,29 +40,35 @@ The idea is simple. Instead of waiting lost of components to integrate, project 
  > ./shutdown.sh
 
 
-### Use jenkins in built in Jetty servlet
+### Use Jenkins in built in Jetty servlet
 Jenkins has built in **Jetty** servlet container. **cd** (change directory in terminal) into to your jenkins.war folder and type:
 
   > java -jar jenkins.war
 
 Now go to your **[localhost:8080](localhost:8080/jenkins)** in your browser. Jenkins is running!
 
-## Build Triggers
-- `Build when a change is pushed to Github`option is checked.
-- Since jenkins is working on localhost, previous option is not worked. Github can't connect our localhost directly. So we used **ngrok** to create tunnel.
+## Communication between Jenkins and Github
+We need to communication between our Jenkins Server and Github Repository. Since we are working on localhost, we should tunnel localhost to make it available for Github. We will use **ngrok** for this purpose.
+- downlad ngrok matches with your system [here](https://ngrok.com/download)
+- unzip it. My **ngrok** location is **/Users/cemalonder/Development/Libraries** cd into here.
+- type:
 
+  > ./ngrok http 8080
 
-Now we are trying to push our repository to Github when we build our repository in Jenkins.
-## Post-build Actions
-- **Add post-build action** drop box is clicked.
-- **Git Publisher** option is selected.
-- **Push Only If Build Succeeds** option is selected.
-- **Branch to push** option is filled by *master*
-- **Target remote name** option is filled by *origin*
+- ngrok terminal will pop up, copy the href next to the **Forwarding**
 
-## Branches to Build
-- **Branch Specifier** is left blank for jenkins to track all branches.
+  >  Forwarding                    http://21db9b29.ngrok.io -> localhost:8080
+
+  It is http://21db9b29.ngrok.io in my terminal. Now it is our localhost:8080 which is the port tomcat runs. When someone clicks on this link while we keep ngrok terminal running, they can get our localhost like getting a webpage!
+
+- Go to your Github repository. Click on Settings -> Webhooks & services. In my case
+**https://github.com/ciglipaf/jenkins-tutorial/settings/hooks** it is.
+- Click on **Add service** dropdown. Select **Jenkins (Git plugin)**.
+- Paste your ngrok link here with some addition. Our ngrok link hrefs to tomcat, while we want to go jenkins, add "/jenkins" and "/github-webhook/" for the webhook part. Final link is **http://21db9b29.ngrok.io/jenkins/github-webhook/**
+- Click "Add service" and "Test service".
 
 ## Resources
 1. [Jenkins merges branches into master](https://www.cloudbees.com/blog/dont-phunk-my-stable-branch-jenkins-pre-tested-commits-stop-breaking-stable-branches )
 2. [Jenkins vide tutorial series](https://www.youtube.com/watch?v=1JSOGJQAhtE)
+3. [ngrok tutorial](https://www.sitepoint.com/accessing-localhost-from-anywhere/)
+4. [Jenkins step by step tutorials](http://www.tutorialspoint.com/jenkins/index.htm)
