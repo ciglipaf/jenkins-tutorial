@@ -67,6 +67,8 @@ We need to communication between our Jenkins Server and Github Repository. Since
 - Paste your ngrok link here with some addition. Our ngrok link hrefs to tomcat, while we want to go jenkins, add "/jenkins" and "/github-webhook/" for the webhook part. Final link is **http://21db9b29.ngrok.io/jenkins/github-webhook/**
 - Click "Add service" and "Test service".
 
+## Merge
+
 ## Resources
 1. [Jenkins merges branches into master](https://www.cloudbees.com/blog/dont-phunk-my-stable-branch-jenkins-pre-tested-commits-stop-breaking-stable-branches )
 2. [Jenkins vide tutorial series](https://www.youtube.com/watch?v=1JSOGJQAhtE)
