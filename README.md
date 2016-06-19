@@ -42,7 +42,9 @@ The idea is simple. Instead of waiting lost of components to integrate, project 
 
 ### Use jenkins in built in Jetty servlet
 Jenkins has built in **Jetty** servlet container. **cd** (change directory in terminal) into to your jenkins.war folder and type:
-    java -jar jenkins.war
+
+  > java -jar jenkins.war
+
 Now go to your **[localhost:8080](localhost:8080/jenkins)** in your browser. Jenkins is running!
 
 ## Build Triggers
